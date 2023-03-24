@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% load static %}
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="{% static 'chess.css' %}">
+
+    {% include "bootstrap.html" %}
+
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <hr>CINS465: Jordan Silva</hr>
+    <h4>
+      Hello, my name is Jordan Silva. I'm from Bakersfield California and attending CSU Chico to finish my degree in Computer Science.
+      During my free time I enjoy playing video games and hanging out with friends. Some of the games I play
+      consist of Valorant, Csgo, League of Legends, Rainbow Six Siege, and Smash Bros. Melee. Since coming to Chico
+      i've met a lot of different people from a variety of backgrounds which has been a good experience, because who doesn't
+      like going to the bar with new people. Overall though i'd say im a pretty simple person and am excited to get this semester out of the way.
+    </h4>
+    <center> <img src = {% static "Selfie.jpg" %} align="center" height="300px" width="300px" border="2px"> </center>
+    <hr></hr>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% load static %}
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="{% static 'chess.css' %}"/>
+
+    {% include "bootstrap.html" %}
+
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <hr>CINS465: Jordan Silva</hr>
+  <h3>
+    <hr>
+    Pawn: <br>
+    Movement: one space going forward (towards enemey) <br>
+    Attack: Horizontal attack if piece is there
+    </hr>
+    <hr>
+    Rook: <br>
+    Movement: cross shape until its a wall or enemey <br>
+    Attack: cross shape
+    </hr>
+    <hr>
+    Bishop: <br>
+    Movement: Horizontal shape until its a wall or enemey <br>
+    Attack: Horizontal attack
+    </hr>
+    <hr>
+    knight: <br>
+    Movement: 3 forward & backwards one to the left or right (shape of an L) <br>
+    Attack: At the edge of the L
+    </hr>
+    <hr>
+    Queen: <br>
+    Movement: takes the Movement of rook and bishop <br>
+    Attack: Horizontal & Cross
+    </hr>
+    <hr>
+    King: <br>
+    Movement: one space going forward or backwards <br>
+    Attack: Can attack unless it puts the king in check
+    </hr>
+
+  </h3>
+  </body>
+</html>

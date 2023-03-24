@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Chess</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/chessPieceSummary/">Summary of Chess Pieces</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/historyOfChess/">History of Chess</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/about/">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin" target="_blank">Admin</a>
+      </li>
+      {% if user.is_authenticated %}
+          <li>
+              <a class="nav-link" href="/logout/">Logout {{user.username}}</a>
+          </li>
+          {% else %}
+          <li>
+              <a class="nav-link" href="/login/">Login</a>
+          </li>
+      {% endif %}
+  </div>
+</nav>

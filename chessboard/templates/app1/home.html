@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    {% load static %}
+
+    <!-- link to java script file -->
+    <script src="{% static 'chess.js' %}" ></script>
+
+    <!-- Link to css file -->
+    <link rel="stylesheet" href="{% static 'chess.css' %}"/>
+
+    {% include "bootstrap.html" %}
+    {% load crispy_forms_tags %}
+
+  </head>
+  <body>
+    {% include "nav.html" %}
+    <hr>CINS465: Jordan Silva</hr>
+    <table>
+      {% for row in rows %}
+        <tr>
+        <th> {{ forloop.revcounter }} </th>
+        {% for name, value in row.items %}
+            <td id = "{{name}}"> {% autoescape off %} {{value}} {% endautoescape %} </td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+    <tr><th></th><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>F</th><th>G</th><th>H</th></tr>
+    </table>
+
+    <div class="container" align="center">
+      <form method="POST">
+        {% csrf_token %}
+        {{ chess_form | crispy }}
+        <button type="submit" class="btn btn-primary" name="move">Move</button>
+      </form>
+      <form method="POST">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary" name="new_game">New Game</button>
+      </form>
+    </div>
+
+  </body>
+</html>

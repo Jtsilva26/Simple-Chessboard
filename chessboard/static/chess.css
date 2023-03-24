@@ -1,0 +1,43 @@
+body{
+  padding: 40px;
+}
+ table {
+ background: tan;
+ margin: auto;
+ border: 1px solid black;
+ }
+ table td {
+ background: tan;
+ width: 100px;
+ height: 60px;
+ border: 1px solid black;
+ font-size: 60px;
+ text-align: center;
+ font-family: monospace;
+ }
+ table th {
+   background: tan;
+ }
+ table tr:nth-child(even)>td:nth-child(even){
+   background: chocolate;
+ }
+ table tr:nth-child(odd)>td:nth-child(odd){
+   background: chocolate;
+ }
+
+ div input {
+   font-size: 20px;
+   text-align: center;
+ }
+ 
+ h2 hr{
+   font-size: 50px;
+ }
+ h2 p {
+   font-size: 30px;
+   text-indent: 20px;
+ }
+ h4{
+   font-size: 20px;
+   text-indent: 20px;
+ }
